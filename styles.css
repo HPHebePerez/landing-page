@@ -1,12 +1,15 @@
 :root {
-  --background: #383833;
-  --primary: #2d3c46;
-  --secondary: #587892;
+  --background: #fefae0;
+  --primary: #283618;
+  --secondary: #dda15e;
+  --thirth: #bc6c25;
   --text-white: #eeeae3;
   --text-rock: #b0a99f;
   --text-blue: #a9b5c2;
+  --text-principal: #283618;
+  --text-secondary: #606c38;
 
-  --poppins: "Poppins";
+  --Lato: "Lato";
 }
 
 * {
@@ -15,6 +18,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: var(--Lato);
+  scrollbar-width: none;
 }
 
 a {
@@ -22,16 +27,18 @@ a {
 }
 
 body {
-  background-color: var(--primary);
+  background: var(--background);
 }
+
+/* HEADER */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--background);
+  background: var(--primary);
   color: var(--text-rock);
-  padding: 10px 30px;
+  padding: 2px 30px;
 }
 
 .navbar {
@@ -45,7 +52,7 @@ header {
   display: flex;
   gap: 10px;
   font-size: 12px;
-  font-family: var(--poppins);
+  font-family: var(--Lato);
 }
 
 .navbar-button {
@@ -57,12 +64,13 @@ header {
 
 .ingresar {
   background-color: var(--primary);
-  color: var(--text-rock);
+  color: var(--text-secondary);
+  font-weight: bold;
   border: none;
   padding: 10px 10px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .home {
@@ -74,5 +82,144 @@ header {
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
+}
+
+/* HERO */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  color: var(--text-principal);
+  padding: 50px 30px;
+  gap: 50px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 99vh;
+  background: url(./imagenes/muelle.jpg) no-repeat center/cover;
+  position: relative;
+  color: var(--text-white);
+  gap: 2rem;
+  padding: 50px;
+  z-index: 2;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 30px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: var(--text-principal);
+}
+
+.btn {
+  background: var(--thirth);
+  color: var(--text-white);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* ACTIVIDADES */
+
+.actividades {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actividades-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  max-width: 80%;
+  padding: 40px;
+  font-weight: 500;
+}
+
+.actividades-text h2 {
+  color: var(--text-principal);
+  padding: 30px;
+  font-weight: 700;
+}
+
+.cajas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--text-secondary);
+  width: 200px;
+  height: 280px;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  gap: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-white);
+}
+
+.imagen {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ABOUT */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  padding: 70px 30px;
+  background: var(--primary);
+}
+
+.paisaje {
+  height: 450px;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  color: var(--text-white);
+}
+.gorosito {
+  height: 200px;
+  border-radius: 8px;
 }
